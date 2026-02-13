@@ -4,16 +4,17 @@ using ASP.NEThwMain.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+
 namespace ASP.NEThwMain.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly DBContext _db;
+        private readonly Context _db;
         private readonly IMapper _mapper;
 
-        public UserController(DBContext db, IMapper mapper)
+        public UserController(Context db, IMapper mapper)
         {
             _db = db;
             _mapper = mapper;

@@ -3,10 +3,10 @@ using ASP.NEThwMain.Models;
 
 namespace ASP.NEThwMain.Data
 {
-    public class DBContext : DbContext
+    public class Context : DbContext
     {
 
-        public DBContext(DbContextOptions<DBContext> options) : base(options) { }
+        public Context(DbContextOptions<Context> options) : base(options) { }
 
         public DbSet<Product> Products => Set<Product>();
         public DbSet<OrderItem> OrderItems => Set<OrderItem>();

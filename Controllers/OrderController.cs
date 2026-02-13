@@ -3,15 +3,16 @@ using ASP.NEThwMain.DTO;
 using ASP.NEThwMain.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 [ApiController]
 [Route("api/[controller]")]
 public class OrderController : ControllerBase
 {
-    private readonly DBContext _db;
+    private readonly Context _db;
     private readonly IMapper _mapper;
 
-    public OrderController(DBContext db, IMapper mapper)
+    public OrderController(Context db, IMapper mapper)
     {
         _db = db;
         _mapper = mapper;

@@ -1,6 +1,6 @@
+using ASP.NEThwMain.Data;
 using ASP.NEThwMain.Mapping;
 using Microsoft.EntityFrameworkCore;
-using ASP.NEThwMain.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //DB
-builder.Services.AddDbContext<DbContext>(opt =>
+builder.Services.AddDbContext<Context>(opt =>
     opt.UseSqlServer(builder.Configuration
     .GetConnectionString("DB")));
 

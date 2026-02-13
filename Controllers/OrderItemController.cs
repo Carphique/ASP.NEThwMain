@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore;
 [Route("api/[controller]")]
 public class OrderItemController : ControllerBase
 {
-    private readonly DBContext _db;
+    private readonly Context _db;
     private readonly IMapper _mapper;
 
-    public OrderItemController(DBContext db, IMapper mapper)
+    public OrderItemController(Context db, IMapper mapper)
     {
         _db = db;
         _mapper = mapper;

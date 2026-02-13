@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.PortableExecutable;
 using Characteristics = ASP.NEThwMain.Models.Characteristics;
+
 namespace ASP.NEThwMain.Controllers
 {
 
@@ -15,9 +16,9 @@ namespace ASP.NEThwMain.Controllers
     {
 
         private readonly IMapper _maper;
-        private readonly DBContext _db;
+        private readonly Context _db;
 
-        public ProductController(DBContext db, IMapper mapper)
+        public ProductController(Context db, IMapper mapper)
         {
             _maper = mapper;
             _db = db;
